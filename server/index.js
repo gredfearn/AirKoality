@@ -47,9 +47,9 @@ if (process.env.NODE_ENV !== 'test') {
   app.use('/', routes)
 
   // Start the server!
-  var port = process.env.PORT || 4000
+  var port = process.env.PORT || 1337
   app.listen(port)
-  console.log("Listening on port", port)
+  console.log("Chillin on port", port)
 }
 else {
   // We're in test mode; make this file importable instead.

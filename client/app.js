@@ -1,5 +1,5 @@
 var m = require('mithril')
-var MyComponent = require('./components/MyComponent')
+var MyComponent = require('./components/koality.js')
 
 //
 // Global variable for global state (e.g. currentUser)
@@ -18,9 +18,10 @@ m.route(document.getElementById('app'), '/', {
 
     view: function (ctrl) {
       return m('.app', [
-        m('h1', 'Node Catapult'),
-        m.component(MyComponent, { title: 'Welcome to my app!' })
-      ])
+        m('h1', 'Air Koality'),
+        m.component(MyComponent, { title: 'Check Your Local Air Koality!' })
+        ])
+
     }
   }
 
