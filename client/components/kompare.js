@@ -9,25 +9,28 @@ Kompare.controller = function () {
 
 Kompare.dataOne;
 Kompare.dataTwo;
-
+if(Kompare.dataOne === undefined){
+  m.route('/')
+}
 }
 m.route.mode = "hash";
 
 Kompare.view = function () {
-var descriptionOne     = Kompare.dataOne.breezometer_description
-var descriptionTwo     = Kompare.dataTwo.breezometer_description
-var mainpollutantOne   = Kompare.dataOne.dominant_pollutant_canonical_name
-var mainpollutantTwo   = Kompare.dataTwo.dominant_pollutant_canonical_name
-var pollutionCauseOne  = Kompare.dataOne.dominant_pollutant_text.causes
-var pollutionCauseTwo  = Kompare.dataTwo.dominant_pollutant_text.causes
-var pollutionEffectOne = Kompare.dataOne.dominant_pollutant_text.effects
-var pollutionEffectTwo = Kompare.dataTwo.dominant_pollutant_text.effects
+var descriptionOne     = Kompare.dataOne.breezometer_description;
+var mainpollutantOne   = Kompare.dataOne.dominant_pollutant_canonical_name;
+var pollutionCauseOne  = Kompare.dataOne.dominant_pollutant_text.causes;
+var pollutionEffectOne = Kompare.dataOne.dominant_pollutant_text.effects;
+
+var descriptionTwo     = Kompare.dataTwo.breezometer_description;
+var mainpollutantTwo   = Kompare.dataTwo.dominant_pollutant_canonical_name;
+var pollutionCauseTwo  = Kompare.dataTwo.dominant_pollutant_text.causes;
+var pollutionEffectTwo = Kompare.dataTwo.dominant_pollutant_text.effects;
 
 
 
 console.log('descriptionOne', descriptionOne)
  return m('.kompare', [
-  m('h1', "Koalified Cities"),
+  m('h1', "Koalified Cities:"),
   m('div', [
     m('h1', Koality.localOne),
     m('h3', "Over Koality:"),
