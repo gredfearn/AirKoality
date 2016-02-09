@@ -7,13 +7,13 @@ var Kompare  = module.exports;
 Kompare.controller = function () {
   var ctrl = this;
 
+Request.checker(Kompare.dataOne, Kompare.dataTwo);
 Kompare.dataOne;
 Kompare.dataTwo;
 
-// Request.checker(Kompare.dataOne, Kompare.dataTwo);
+m.route.mode = "hash";
 
 }
-// m.route.mode = "hash";
 
 Kompare.view = function () {
 var descriptionOne     = Kompare.dataOne.breezometer_description;
@@ -29,35 +29,33 @@ var pollutionEffectTwo = Kompare.dataTwo.dominant_pollutant_text.effects;
 
 
  return m('.kompare', [
-  m('h1', "Koalified Cities:"),
-  m('button', {
-    type: 'submit',
-    onclick: function(e) { e.preventDefault(); m.route('/') }
-    }, "Go Kompare Other Cities"),
-  m('h2.secondHeader', Koality.localOne),
+  m('h2.secondHeader', Koality.localOne + ':'),
   m('div.scroll', [
-    m('h3.thirdHeader', "Over Koality:"),
-    m('p', descriptionOne),
+    m('h3.thirdHeader', "Overall Koality:"),
+    m('p.pe', descriptionOne),
     m('h3.thirdHeader', "Main Pollutant:"),
-    m('p', mainpollutantOne),
+    m('p.pe', mainpollutantOne),
     m('h3.thirdHeader', "Cause of Pollution:"),
-    m('p', pollutionCauseOne),
+    m('p.pe', pollutionCauseOne),
     m('h3.thirdHeader', "Effects of Pollution:"),
-    m('p', pollutionEffectOne)
+    m('p.pe', pollutionEffectOne)
     ]),
   m('br'),
-  m('h2.secondHeader', Koality.localTwo),
+  m('h2.secondHeader', Koality.localTwo + ':'),
    m('div.scroll', [
-    m('h3.thirdHeader', "Over Koality:"),
-    m('p', descriptionTwo),
+    m('h3.thirdHeader', "Overall Koality:"),
+    m('p.pe', descriptionTwo),
     m('h3.thirdHeader', "Main Pollutant:"),
-    m('p', mainpollutantTwo),
+    m('p.pe', mainpollutantTwo),
     m('h3.thirdHeader', "Cause of Pollution:"),
-    m('p', pollutionCauseTwo),
+    m('p.pe', pollutionCauseTwo),
     m('h3.thirdHeader', "Effects of Pollution:"),
-    m('p', pollutionEffectTwo)
+    m('p.pe', pollutionEffectTwo)
     ]),
-
+   m('button.buttonss', {
+    type: 'submit',
+    onclick: function(e) { e.preventDefault(); m.route('/') }
+    }, "Go Kompare Other Cities")
   ])
 }
 

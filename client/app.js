@@ -11,7 +11,9 @@ window.App = {}
 //
 // Client-side routing
 //
-m.route.mode = 'pathname'
+m.route.mode = "hash";
+
+// m.route.mode = 'pathname'
 
 m.route(document.getElementById('app'), "/", {
     "/": Koality,

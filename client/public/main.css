@@ -1,45 +1,148 @@
+.buttons {
+  padding      : 15px;
+  margin-top   : 1px;
+  margin-left  : 2%;
+  font         : bold .8em sans-serif;
+  border       : 2px solid #333;
+  border-radius: 5px;
+  background   : #61AF87;
+  cursor       : pointer;
+}
+
+.buttons:hover,
+
+.buttons:focus {
+  outline    : none;
+  background : #073F23;
+  color      : #FFF;
+}
+
+.buttonss {
+  float        : center;
+  padding      : 20px;
+  margin-top   : 50px;
+  margin-left  : 42%;
+  font         : bold 1em sans-serif;
+  border       : 2px solid #333;
+  border-radius: 5px;
+  background   : #61AF87;
+  cursor       : pointer;
+}
+
+.buttonss:hover,
+
+.buttonss:focus {
+  outline    : none;
+  background : #073F23;
+  color      : #FFF;
+}
+
+.compare {
+ color       : #C7C071;
+ margin      : 0px;
+ outline     : black;
+ font-size   : 33px;
+ font-family : Impact, Charcoal, sans-serif;
+}
+
+.desc {
+ color      : #E5E1B8;
+ margin     : 0px;
+ outline    : black;
+ font-size  : 28px;
+ text-align : left;
+ margin-left: 10%;
+ font-family: Impact, Charcoal, sans-serif;
+}
+
+
+
+
+.inputs {
+  font-size     : 16px;
+  font-weight   : lighter;
+  width         : 250px;
+  height        : 30px;
+  border        : 1px solid #999;
+  border-radius : 0;
+  margin-bottom : 0px;
+  font-family   : Impact, Charcoal, sans-serif;
+}
+
 .scroll {
-  background-color: rgba(0, 0, 0, .7);
-  color: #61AF87;
-  height: 35%;
-  width:  80%;
-  border: solid 6px #90D4A6;
-  overflow:scroll;
-  overflow-x:hidden;
-  overflow-y:scroll;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-bottom: 0px;
-  padding-top: 0px;
+  float            : center;
+  background-color : rgba(0, 0, 0, .7);
+  color            : #61AF87;
+  height           : 33%;
+  width            : 90%;
+  border           : solid 6px #90D4A6;
+  overflow         :scroll;
+  overflow-x       :hidden;
+  overflow-y       :scroll;
+  margin-top       : 0px;
+  margin-bottom    : 0px;
+  padding-bottom   : 0px;
+  padding-top      : 0px;
+  text-align       : center;
+  font-family      : "handwriting";
 }
 
 .firstHeader {
-  font-size: 50px;
-  color: #FFD9AA;
-
+  font-family      : Impact, Charcoal, sans-serif;
+  font-weight      : bolder;
+  color            : #61AF87;
+  margin           : 0px;
+  font-size        : 50px;
+  margin-left      : 17%;
+  margin-bottom    : 10px;
+  text-align       : left;
+  text-decoration  : underline;
 }
 
 .secondHeader {
-  font-size: 50px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-bottom: 0px;
-  padding-top: 0px;
+  font-family    : Impact, Charcoal, sans-serif;
+  font-size      : 50px;
+  color          : #E5E1B8;
+  margin-top     : 0px;
+  margin-bottom  : 0px;
+  padding-bottom : 0px;
+  padding-top    : 0px;
+  text-transform : uppercase;
+  text-align     : left;
 }
 
 .thirdHeader {
-  font-size: 18;
-  font-variant: bold;
-  color: #BFF5DA;
+  font-family    : Impact, Charcoal, sans-serif;
+  font-size      : 30;
+  font-variant   : lighter;
+  color          : #BFF5DA;
+  text-transform : uppercase;
 
 }
 
 body {
-    background: url(http://newtopwallpapers.com/wp-content/uploads/2014/02/Koala-HD-Wallpaper-2.jpg) ;
-    background-repeat: no-repeat;
-    background-position: right top;
-    background-attachment: fixed;
-    background-size: 100%;
+    background            : url(http://4.bp.blogspot.com/--JlL14Hr1fw/T-R2kUn-zdI/AAAAAAAACng/06enl4xTJ24/s1600/koala+image.jpg);
+    background-repeat     : no-repeat;
+    background-position   : right top;
+    background-attachment : fixed;
+    background-size       : 100%;
 }
 
+.pe {
+  font-size  : 25px;
+  font-weight: lighter;
+}
 
+.koala {
+  font-size : 50px;
+  color     : #FFD9AA;
+}
+
+.forms {
+  font-size     : 25px;
+  color         : #FFD9AA;
+  margin-bottom : 30px;
+  margin-top    : 10px;
+  margin-left   : 24%;
+
+}
