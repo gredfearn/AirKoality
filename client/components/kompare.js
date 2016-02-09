@@ -3,24 +3,23 @@ var Request    = require('../models/requests')
 var Koality  = require('./koality.js')
 var Kompare  = module.exports;
 
-
+var dataOne = Koality.dataOne;
+var dataTwo = Koality.dataTwo;
 
 Kompare.controller = function () {
   var ctrl = this;
-  console.log(Koality.dataOne)
+  console.log('Koality.dataOne', dataOne)
+
 
 }
 m.route.mode = "hash";
 
 Kompare.view = function () {
  return m('.kompare', [
-  m('h1', "KOMPARE VIEW"),
+  m('h1', "Koalified Cities"),
   m('button', { type: 'submit',
-    onsubmit: m.route('/') },'Kompare Again')
+    onclick: m.route('/') },'Kompare Again')
   ])
 }
 
 
-// m.route(document.body, "/kompare", {
-//     "/dashboard/:userID": dashboard
-// });

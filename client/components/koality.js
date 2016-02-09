@@ -1,10 +1,9 @@
 var m       = require('mithril')
 var Request = require('../models/requests')
-
 var Koality = module.exports;
 
-var dataOne = null;
-var dataTwo = null;
+Koality.dataOne = null;
+Koality.dataTwo = null;
 
 Koality.controller = function (options) {
   var ctrl = this;
@@ -17,21 +16,18 @@ Koality.controller = function (options) {
 
     Request.fetch(one)
       .then(function(res){
-        dataOne = res;
+        Koality.dataOne = res;
         console.log('res', res)
       })
 
-    Request.fetch(one)
+    Request.fetch(two)
       .then(function(res){
-        dataTwo = res;
-        console.log('res', res)
+        Koality.dataTwo = res;
+        console.log('res', res);
+        m.route('/kompare');
       })
   }
-
-// ctrl.fetchData("Dallas", " austin")
-
 }
-
 
 
 Koality.view = function (ctrl, options) {
@@ -39,19 +35,16 @@ Koality.view = function (ctrl, options) {
     m('h1', "Check Local Air Koality"),
     m('form', 'Compare Cities: ', {}, [
       m('br'),
-      m('input', { type: 'text', placeholder: "Enter City", onsubmit: m.withAttr('value', ctrl.localOne) }),
+      m('input', { type: 'text', placeholder: "Enter City", oninput: function(e) { e.preventDefault; ctrl.localOne = this.value} }),
       m('br'),
-      m('input', { type: 'text', placeholder: "Enter City", onsubmit: m.withAttr('value', ctrl.localTwo) }),
+      m('input', { type: 'text', placeholder: "Enter City", oninput: function(e) { e.preventDefault; ctrl.localTwo = this.value} }),
       m('br'),
       m('button', {
         type: 'submit',
-        onsubmit: function () {
+        onclick: function (e) { e.preventDefault()
           return ctrl.fetchData(ctrl.localOne, ctrl.localTwo)
-            .then(function() {
-              m.route('/kompare')
-        })
        }
-     }, 'Check Koality!')
+     }, 'Check Air Koality!')
     ])
   ])
 }
