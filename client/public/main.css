@@ -1,0 +1,26 @@
+.scroll {
+  height: 35%;
+  width:  80%;
+  border: solid 6px #90D4A6;
+  overflow:scroll;
+  overflow-x:hidden;
+  overflow-y:scroll;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+
+.firstHeader {
+  font-size: 50px;
+  color: #D4C890;
+}
+
+.secondHeader {
+  font-size: 50px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+

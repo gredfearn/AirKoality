@@ -7,3 +7,9 @@ Request.fetch = function (location) {
     url: 'https://api.breezometer.com/baqi/?location=' + location + '&key=d22e9878152a4e998a88660bfc74aa23'
   })
 }
+
+Request.checker = function (one, two) {
+  if(one === undefined || two === undefined){
+    m.route('/')
+  }
+}
