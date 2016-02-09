@@ -1,9 +1,10 @@
 var m       = require('mithril')
-var Request = require('../models/requests')
+var Request = require('../models/requests.js')
+var Kompare = require('./kompare.js')
 var Koality = module.exports;
 
-Koality.dataOne = null;
-Koality.dataTwo = null;
+Koality.dataOne;
+Koality.dataTwo;
 
 Koality.controller = function (options) {
   var ctrl = this;
@@ -16,16 +17,25 @@ Koality.controller = function (options) {
 
     Request.fetch(one)
       .then(function(res){
-        Koality.dataOne = res;
-        console.log('res', res)
+        Koality.localOne = one;
+       return Kompare.dataOne = res;
       })
+      // .catch(function(){
+      //  return prompt('Please Enter A Valid City')
+      // })
 
     Request.fetch(two)
       .then(function(res){
-        Koality.dataTwo = res;
-        console.log('res', res);
-        m.route('/kompare');
+        Koality.localTwo = two;
+        return Kompare.dataTwo = res;
+
       })
+      .then(function(){
+        m.route('/kompare')
+      })
+      // .catch(function(){
+      //  return prompt('Please Enter A Valid City')
+      // })
   }
 }
 
@@ -35,9 +45,15 @@ Koality.view = function (ctrl, options) {
     m('h1', "Check Local Air Koality"),
     m('form', 'Compare Cities: ', {}, [
       m('br'),
-      m('input', { type: 'text', placeholder: "Enter City", oninput: function(e) { e.preventDefault; ctrl.localOne = this.value} }),
+      m('input', {
+        type: 'text',
+        placeholder: "Enter City",
+        oninput: function(e) { e.preventDefault; ctrl.localOne = this.value} }),
       m('br'),
-      m('input', { type: 'text', placeholder: "Enter City", oninput: function(e) { e.preventDefault; ctrl.localTwo = this.value} }),
+      m('input', {
+        type: 'text',
+        placeholder: "Enter City",
+        oninput: function(e) { e.preventDefault; ctrl.localTwo = this.value} }),
       m('br'),
       m('button', {
         type: 'submit',

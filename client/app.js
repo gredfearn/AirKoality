@@ -14,8 +14,6 @@ window.App = {}
 m.route.mode = 'pathname'
 
 m.route(document.getElementById('app'), "/", {
-
     "/": Koality,
     "/kompare": Kompare
-
 })
