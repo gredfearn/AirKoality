@@ -1,4 +1,6 @@
 .scroll {
+  background-color: rgba(0, 0, 0, .7);
+  color: #61AF87;
   height: 35%;
   width:  80%;
   border: solid 6px #90D4A6;
@@ -13,7 +15,8 @@
 
 .firstHeader {
   font-size: 50px;
-  color: #D4C890;
+  color: #FFD9AA;
+
 }
 
 .secondHeader {
@@ -23,4 +26,20 @@
   padding-bottom: 0px;
   padding-top: 0px;
 }
+
+.thirdHeader {
+  font-size: 18;
+  font-variant: bold;
+  color: #BFF5DA;
+
+}
+
+body {
+    background: url(http://newtopwallpapers.com/wp-content/uploads/2014/02/Koala-HD-Wallpaper-2.jpg) ;
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
 

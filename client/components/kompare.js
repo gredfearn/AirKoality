@@ -36,25 +36,25 @@ var pollutionEffectTwo = Kompare.dataTwo.dominant_pollutant_text.effects;
     }, "Go Kompare Other Cities"),
   m('h2.secondHeader', Koality.localOne),
   m('div.scroll', [
-    m('h3', "Over Koality:"),
+    m('h3.thirdHeader', "Over Koality:"),
     m('p', descriptionOne),
-    m('h3', "Main Pollutant:"),
+    m('h3.thirdHeader', "Main Pollutant:"),
     m('p', mainpollutantOne),
-    m('h3', "Cause of Pollution:"),
+    m('h3.thirdHeader', "Cause of Pollution:"),
     m('p', pollutionCauseOne),
-    m('h3', "Effects of Pollution:"),
+    m('h3.thirdHeader', "Effects of Pollution:"),
     m('p', pollutionEffectOne)
     ]),
   m('br'),
   m('h2.secondHeader', Koality.localTwo),
    m('div.scroll', [
-    m('h3', "Over Koality:"),
+    m('h3.thirdHeader', "Over Koality:"),
     m('p', descriptionTwo),
-    m('h3', "Main Pollutant:"),
+    m('h3.thirdHeader', "Main Pollutant:"),
     m('p', mainpollutantTwo),
-    m('h3', "Cause of Pollution:"),
+    m('h3.thirdHeader', "Cause of Pollution:"),
     m('p', pollutionCauseTwo),
-    m('h3', "Effects of Pollution:"),
+    m('h3.thirdHeader', "Effects of Pollution:"),
     m('p', pollutionEffectTwo)
     ]),
 

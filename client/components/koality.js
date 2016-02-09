@@ -42,7 +42,7 @@ Koality.controller = function (options) {
 
 Koality.view = function (ctrl, options) {
   return m('.koality', [
-    m('h1.firstHeader',  "Check Local Air Koality"),
+    m('h1.firstHeader', "Check Local Air Koality"),
     m('form', 'Compare Cities: ', {}, [
       m('br'),
       m('input', {
