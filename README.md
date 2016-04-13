@@ -1,4 +1,4 @@
-# MKS-ATX-mvp-Koality
+# Air Koality
 Enter two different cities in the United States and Kompare the air Koality! 
 
 ## To run locally:
